@@ -155,6 +155,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         .house-container {
@@ -303,9 +304,115 @@
             border-radius: 1rem;
         }
 
+        /* Challenges Section Styling */
+        .challenges-section {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .challenges-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .challenges-header h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .challenges-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .challenge-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.85rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .challenge-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .challenge-card ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .challenges-footer {
+            background: #f1f5f9;
+            border-radius: 0.85rem;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .challenges-footer p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-main);
+        }
+
+        .challenges-footer strong {
+            color: var(--text-main);
+        }
+
+        .submit-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--hydra-primary);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            width: fit-content;
+            transition: opacity 0.2s;
+        }
+
+        .submit-link-btn:hover {
+            opacity: 0.9;
+        }
+
         @media(max-width: 768px) {
             header h1 { font-size: 2rem; }
             .house-container { padding: 1.25rem; }
+            .challenges-section { padding: 1.25rem; }
         }
     </style>
 </head>
@@ -360,7 +467,6 @@
                     <ul class="student-list">
                         <li class="student-item"><span class="student-name">Nguyen Ngoc Thien Kim</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Nguyen Hoang Thien Kim</span><span class="student-grade">Y8 International</span></li>
-                        <!--<li class="student-item"><span class="student-name">Wu Cheng Yuan</span><span class="student-grade">IG1</span></li>	-->
                         <li class="student-item"><span class="student-name">Vuong Pham Gia Nhu</span><span class="student-grade">A Level</span></li>
                         <li class="student-item"><span class="student-name">Tran Nguyen Quoc Bao</span><span class="student-grade">A Level</span></li>
                         <li class="student-item"><span class="student-name">Pham Ngoc Gia Bao</span><span class="student-grade">Y8 Integrated</span></li>
@@ -375,7 +481,6 @@
                         <li class="student-item"><span class="student-name">Ton That Minh Thuan</span><span class="student-grade">IG1</span></li>
                         <li class="student-item"><span class="student-name">Nguyen Phuong Quang</span><span class="student-grade">A Level</span></li>
                         <li class="student-item"><span class="student-name">Le Viet Anh</span><span class="student-grade">Y8 Integrated</span></li>
-                       
                     </ul>
                 </div>
                 <!-- Chimera 4 -->
@@ -388,7 +493,6 @@
                         <li class="student-item"><span class="student-name">Chung Bao Long</span><span class="student-grade">A Level</span></li>
                         <li class="student-item"><span class="student-name">Ta Ngoc Phuong Nghi</span><span class="student-grade">Y7 Integrated</span></li>
                         <li class="student-item"><span class="student-name">Le Bao Khang</span><span class="student-grade">Y8 Integrated</span></li>
-                       
                     </ul>
                 </div>
                 <!-- Chimera 5 -->
@@ -399,7 +503,6 @@
 			 <li class="student-item"><span class="student-name">Huynh Ly Ngoc Han</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Lin Ang-Fong</span><span class="student-grade">Y8 International</span></li>
                         <li class="student-item"><span class="student-name">Hu Jing Hang</span><span class="student-grade">IG2</span></li>
-                    <!--    <li class="student-item"><span class="student-name">Maria Paula Melendez E.</span><span class="student-grade">A Level</span></li> -->
                         <li class="student-item"><span class="student-name">Vo Vinh Thuy</span><span class="student-grade">Y9 Integrated</span></li>
                     </ul>
                 </div>
@@ -425,7 +528,6 @@
                         <li class="student-item"><span class="student-name">Dinh Le Truong Vi</span><span class="student-grade">IG1</span></li>
                         <li class="student-item"><span class="student-name">Victor Omar Melendez E.</span><span class="student-grade">IG2</span></li>
                         <li class="student-item"><span class="student-name">Yang Li Wen</span><span class="student-grade">A Level</span></li>
-                      <!--  <li class="student-item"><span class="student-name">Dang Quynh Vy</span><span class="student-grade">Y7 Integrated</span></li> -->
                     </ul>
                 </div>
                 <!-- Hydra 2 -->
@@ -446,7 +548,6 @@
                     <ul class="student-list">
                         <li class="student-item"><span class="student-name">Li Jing han</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Wang Pham Gia Linh</span><span class="student-grade">Y8 International</span></li>
-                     <!--   <li class="student-item"><span class="student-name">Singuluri Jahnavi Priya</span><span class="student-grade">IG1</span></li> -->
                         <li class="student-item"><span class="student-name">Nguyen Chau Hai Yen</span><span class="student-grade">AS Level</span></li>
                         <li class="student-item"><span class="student-name">Le Minh Quang</span><span class="student-grade">Y7 Integrated</span></li>
                         <li class="student-item"><span class="student-name">Trinh Cong Minh Hieu</span><span class="student-grade">Y9 Integrated</span></li>
@@ -500,18 +601,14 @@
                         <li class="student-item"><span class="student-name">Do Tuyet Ngoc</span><span class="student-grade">AS Level</span></li>
                         <li class="student-item"><span class="student-name">Chen Kim Hung</span><span class="student-grade">Y7 Integrated</span></li>
 			<li class="student-item"><span class="student-name">Tran Khanh Uyen</span><span class="student-grade">Y8 International</span></li>
-			
-                        
                     </ul>
                 </div>
                 <!-- Sphinx 2 -->
                 <div class="subgroup-card" data-subgroup="Sphinx2">
                     <div class="subgroup-title">Sphinx 2 <span>(6)</span></div>
                     <ul class="student-list">
-                        
                         <li class="student-item"><span class="student-name">Wu Yu hang</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Wang Meng Xi</span><span class="student-grade">Y8 International</span></li>
-                     <!--   <li class="student-item"><span class="student-name">Joyeth Tham</span><span class="student-grade">IG1</span></li> -->
                         <li class="student-item"><span class="student-name">Le Tuong Vy</span><span class="student-grade">AS Level</span></li>
                         <li class="student-item"><span class="student-name">Tran Ngoc Bao Tien</span><span class="student-grade">Y7 Integrated</span></li>
  			<li class="student-item"><span class="student-name">Trinh Nha Van</span><span class="student-grade">Y8 International</span></li>
@@ -522,7 +619,6 @@
                 <div class="subgroup-card" data-subgroup="Sphinx3">
                     <div class="subgroup-title">Sphinx 3 <span>(7)</span></div>
                     <ul class="student-list">
-                       
                         <li class="student-item"><span class="student-name">Wang Zi Tong</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Pham Ngoc Phuong Uyen</span><span class="student-grade">Y8 International</span></li>
                         <li class="student-item"><span class="student-name">Ta Anh Thu</span><span class="student-grade">Y8 International</span></li>
@@ -536,8 +632,6 @@
                 <div class="subgroup-card" data-subgroup="Sphinx4">
                     <div class="subgroup-title">Sphinx 4 <span>(6)</span></div>
                     <ul class="student-list">
-                       
-                  <!--      <li class="student-item"><span class="student-name">Hoang Tang Minh Khoi</span><span class="student-grade">Y7 International</span></li> -->
                         <li class="student-item"><span class="student-name">Nguyen Quoc Viet</span><span class="student-grade">Y8 International</span></li>
                         <li class="student-item"><span class="student-name">Li Han Hui</span><span class="student-grade">Y8 International</span></li>
                         <li class="student-item"><span class="student-name">Cui Enzhen</span><span class="student-grade">IG1</span></li>
@@ -550,8 +644,6 @@
                 <div class="subgroup-card" data-subgroup="Sphinx5">
                     <div class="subgroup-title">Sphinx 5 <span>(6)</span></div>
                     <ul class="student-list">
-                       
-                       
                         <li class="student-item"><span class="student-name">Liu Meng Yuan</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Hsiao Chun Che</span><span class="student-grade">Y7 International</span></li>
                         <li class="student-item"><span class="student-name">Le Hung Manh</span><span class="student-grade">Y8 International</span></li>
@@ -568,11 +660,58 @@
             <p>No students found matching your search query.</p>
         </div>
     </div>
+
+    <div class="challenges-section">
+        <div class="challenges-header">
+            <h2><i class="fa-solid fa-clipboard-list" style="color: var(--hydra-primary);"></i> Student Tasks & Challenges for the Day</h2>
+            <p>Students will be working on 3 main challenges:</p>
+        </div>
+
+        <div class="challenges-grid">
+            <!-- Challenge 1 -->
+            <div class="challenge-card">
+                <h3><i class="fa-solid fa-rocket" style="color: var(--chimera-primary);"></i> Catapult Challenge</h3>
+                <ul>
+                    <li>Build a catapult that stands on the ground on its own (people cannot hold it in place).</li>
+                    <li>It must be able to hit a target 3.6m away (6 classroom tiles).</li>
+                    <li>Targets are bottles and cans.</li>
+                    <li>Groups will have 30 seconds to hit as many targets as possible.</li>
+                </ul>
+            </div>
+
+            <!-- Challenge 2 -->
+            <div class="challenge-card">
+                <h3><i class="fa-solid fa-shirt" style="color: var(--hydra-primary);"></i> House Jersey Design</h3>
+                <ul>
+                    <li>Design a house jersey to be printed later this year for all houses, ensuring it is as visible, cool, and clear as possible.</li>
+                    <li>Draw by hand or on a device, incorporating house colors and logos.</li>
+                    <li>Make it into a Canva presentation to present at the assembly at 11:30 AM (short 2 min presentation).</li>
+                    <li>Submit your Canva link for your jersey design to the designated folder.</li>
+                </ul>
+            </div>
+
+            <!-- Challenge 3 -->
+            <div class="challenge-card">
+                <h3><i class="fa-solid fa-fish" style="color: var(--sphinx-primary);"></i> Recycled Sea Creature Build</h3>
+                <ul>
+                    <li>5 groups from each house need to collaborate to build one sea creature of their choosing using recycled materials.</li>
+                    <li>The size must be no smaller than 50cm × 50cm (needs to be bigger than 50×50).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="challenges-footer">
+            <p><strong>Completion & Showcase:</strong> You will need to complete all of the challenges by <strong>11:30 AM</strong> and meet at the <strong>MPH</strong> for the catapult trials, jersey design showcase, and sea creature display. Winners will be announced at the assembly.</p>
+            <p><strong>Submission Link:</strong> Submit your Canva link for your jersey design here.</p>
+            <div>
+                <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=EQLobzWKvE-MwewEhJ2OR48-NJ14gzZCgZTMKHf6LCJURDRMTFkwMUVNUEVYWUpGUkNCSEE4S1pBUi4u&route=shorturl" class="submit-link-btn" target="_blank"><i class="fa-solid fa-cloud-arrow-up"></i> Submit Jersey Design (Canva Link)</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
     function filterHouse(houseName) {
-        // Update active button
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         if(houseName === 'all') {
             document.querySelector('.filter-btn:not([data-house])').classList.add('active');
@@ -580,7 +719,6 @@
             document.querySelector(`.filter-btn[data-house="${houseName}"]`).classList.add('active');
         }
 
-        // Show/Hide houses
         const houses = document.querySelectorAll('.house-container');
         houses.forEach(house => {
             if(houseName === 'all' || house.dataset.houseName === houseName) {
